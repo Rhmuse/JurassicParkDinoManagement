@@ -10,10 +10,8 @@ load_dotenv()
 
 def get_secret():
     """Check non-dispatch days to allow for next working day dispatches over 3 day weekends and whatnot"""
-    # table = os.getenv("TABLE")
-    # params = f"q.where=Chapter_ID='{chapter_id}'"
     table = "cm_tbl_users"
-    params = f"q.where=Login_status='true'"
+    params = "q.where=Login_status='true'"
     load_dotenv()
     account = os.getenv("ACCOUNT_ID")
     access_token = get_new_token()  # generate Caspio token for authentication
@@ -22,7 +20,7 @@ def get_secret():
         "Authorization": "Bearer " + access_token,
         "Content-Type": "application/json",
     }
-    runtime = time.time()
+    # runtime = time.time()
     print("Getting bad days from Caspio")
     import json
 
