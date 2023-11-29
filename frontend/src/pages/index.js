@@ -10,6 +10,7 @@ import { OverviewTasksProgress } from 'src/sections/overview/overview-tasks-prog
 import { OverviewTotalCustomers } from 'src/sections/overview/overview-total-customers';
 import { OverviewTotalProfit } from 'src/sections/overview/overview-total-profit';
 import { OverviewTraffic } from 'src/sections/overview/overview-traffic';
+import Caspio from 'src/components/caspio';
 
 const now = new Date();
 
@@ -37,11 +38,13 @@ const Page = () => (
             sm={6}
             lg={3}
           >
-            <OverviewBudget
-              difference={12}
-              positive
-              sx={{ height: '100%' }}
-              value="$24k"
+            <Caspio
+              appKey="32d4d000278f598350b24449b7df"
+              account="c2hbt072"
+              caspioDiv="Dinos"
+              classItem="caspio"
+            // paramTitle={ }
+            // param={ }
             />
           </Grid>
           <Grid
